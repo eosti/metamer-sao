@@ -1,0 +1,120 @@
+global:
+  i2c_address: 0x28 # 7-bit
+  iref_ma: 20.1
+leds:
+  - name: Deep Red
+    pn: QBLP631-S3
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 640
+    wavelength_peak: 660
+    brightness_mcd: 25
+    index: 11
+  - name: Red
+    pn: QBLP631-R
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 625
+    brightness_mcd: 100
+    index: 10
+  - name: Orange
+    pn: QBLP631-O
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 605
+    brightness_mcd: 160
+    index: 9
+  - name: Yellow
+    pn: QBLP631-Y
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 590
+    brightness_mcd: 150
+    index: 8
+  - name: Yellow Green
+    pn: QBLP631-AG
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 570
+    brightness_mcd: 50
+    index: 7
+  - name: Green
+    pn: SML-M13PTT86
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 560
+    brightness_mcd: 16
+    index: 6
+  - name: True Green
+    pn: QBLP631-IG
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 525
+    brightness_mcd: 400
+    index: 5
+  - name: Blue Greener
+    pn: SMLD12E2N1WT86
+    test_current_ma: 5
+    max_current_ma: 20
+    wavelength_dominant: 505
+    brightness_mcd: 120
+    index: 4
+  - name: Bluer Green
+    pn: SMLD12E3N1WT86
+    test_current_ma: 5
+    max_current_ma: 20
+    wavelength_dominant: 496
+    brightness_mcd: 85
+    index: 3
+  - name: Blue
+    pn: QBLP631-IB
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 470
+    brightness_mcd: 125
+    index: 2
+  - name: Bluer
+    pn: APT2012QBC/D 
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 465
+    wavelength_peak: 460
+    brightness_mcd: 100
+    index: 1
+  - name: Blueist
+    pn: 150224BS73100
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 456
+    wavelength_peak: 452
+    brightness_mcd: 220
+    index: 0
+  - name: Cool White (11000K)
+    pn: QBLP661-IW5-CW
+    test_current_ma: 5
+    max_current_ma: 25
+    color_temperature: 11000
+    brightness_mcd: 350
+    # note that they give "for reference" 1500mcd @ 20mA
+    index: 15
+  - name: Cool White (6000K)
+    pn: QBLP675-IW-CW
+    test_current_ma: 20
+    max_current_ma: 30
+    color_temperature: 6000
+    brightness_mcd: 1600
+    index: 14
+  - name: Natural White (4000K)
+    pn: QBLP675-IW-NW
+    test_current_ma: 20
+    max_current_ma: 30
+    color_temperature: 4000
+    brightness_mcd: 1650
+    index: 13
+  - name: Warm White (3000K)
+    pn: QBLP675-IW-WW
+    test_current_ma: 20
+    max_current_ma: 30
+    color_temperature: 3000
+    brightness_mcd: 1540
+    index: 12

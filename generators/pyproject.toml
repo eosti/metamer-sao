@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "metamer-badge"
+version = "0.1.0"
+description = ""
+authors = ["eosti <reidsox1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+strictyaml = "^1.7.3"
+colour-science = "^0.4.4"
+path = "^16.14.0"
+csnake = "^0.3.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
