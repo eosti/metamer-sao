@@ -1,16 +1,14 @@
 [tool.poetry]
-name = "metamer-badge"
+name = "metamer-badge-generators"
 version = "0.1.0"
 description = ""
 authors = ["eosti <reidsox1@gmail.com>"]
-readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.11"
+python = ">=3.10"
 strictyaml = "^1.7.3"
-colour-science = "^0.4.4"
 path = "^16.14.0"
-csnake = "^0.3.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"

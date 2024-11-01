@@ -1,0 +1,126 @@
+global:
+  i2c_address: 0x48 # 7-bit
+  r_ext: 3650
+leds:
+  - name: Deep Red
+    pn: APT2012SRCPRV
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 640
+    wavelength_peak: 655
+    brightness_mcd: 100
+    index: 11
+  - name: Red
+    pn: E6C0805URAC1UDA
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 620
+    brightness_mcd: 110
+    index: 10
+  - name: Orange
+    pn: LTST-C171KFKT 
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 605
+    wavelength_peak: 611
+    brightness_mcd: 90
+    index: 9
+  - name: Yellow
+    pn: E6C0805UYAC1UDA
+    test_current_ma: 20
+    max_current_ma: 25
+    wavelength_dominant: 590
+    wavelength_peak: 591
+    brightness_mcd: 100
+    index: 8
+  - name: Yellow Green
+    pn: E6C0805YGAC1UDA
+    test_current_ma: 20
+    max_current_ma: 25
+    wavelength_dominant: 570
+    wavelength_peak: 573
+    brightness_mcd: 30
+    index: 7
+  - name: Green
+    pn: SML-H12P8TT86
+    test_current_ma: 20
+    max_current_ma: 20
+    wavelength_dominant: 560
+    brightness_mcd: 4
+    index: 6
+  - name: True Green
+    pn: E6C0805VGAC1UDA
+    test_current_ma: 20
+    max_current_ma: 25
+    wavelength_dominant: 525
+    wavelength_peak: 518
+    brightness_mcd: 600
+    index: 5
+  - name: Blue Greener
+    pn: SMLD12E2N1WT86
+    test_current_ma: 5
+    max_current_ma: 20
+    wavelength_dominant: 505
+    brightness_mcd: 120
+    index: 4
+  - name: Bluer Green
+    pn: SMLD12E3N1WT86
+    test_current_ma: 5
+    max_current_ma: 20
+    wavelength_dominant: 496
+    brightness_mcd: 85
+    index: 3
+  - name: Blue
+    pn: XL-TD2012UBC 
+    test_current_ma: 20
+    max_current_ma: 20
+    wavelength_dominant: 470
+    wavelength_peak: 470
+    # altered to fudge the values
+    brightness_mcd: 100
+    index: 2
+  - name: Bluer
+    pn: E6C0805QBAC1UDA
+    test_current_ma: 20
+    max_current_ma: 25
+    wavelength_dominant: 465
+    wavelength_peak: 465
+    brightness_mcd: 100
+    index: 1
+  - name: UV
+    pn: P2-0805UVTCS2-0.8T 
+    test_current_ma: 20
+    max_current_ma: 30
+    wavelength_dominant: 405
+    wavelength_peak: 405
+    # altered to fudge the values
+    brightness_mcd: 200
+    index: 0
+  - name: Daylight White (11000K)
+    pn: HL-PSC-2012H233W 9000-16000
+    test_current_ma: 20
+    max_current_ma: 30
+    color_temperature: 11000
+    brightness_mcd: 1300
+    index: 15
+  - name: Bright White (6000K)
+    pn: HL-A-3014H416W-S1-08HL-HR3 
+    test_current_ma: 30
+    max_current_ma: 40
+    color_temperature: 6000
+    brightness_mcd: 4300
+    index: 14
+  - name: Cool White (4000K)
+    pn: HL-A-3014H416W-S1-08HL-HR3 
+    test_current_ma: 30
+    max_current_ma: 40
+    color_temperature: 4000
+    brightness_mcd: 4300
+    index: 13
+  - name: Warm White (3000K)
+    pn: HL-A-3014H416W-S1-08HL-HR3 
+    test_current_ma: 30
+    max_current_ma: 40
+    color_temperature: 3000
+    brightness_mcd: 4000
+    index: 12
