@@ -43,6 +43,8 @@ int main(void) {
     // Misusing a register for the badge to determine MCU code version
     aw210xx_write(0x86, VERSION_NUMBER);
 
+    HAL_I2C_DeInit(&hi2c);
+
     while (1) {
         // nop
     }
@@ -71,7 +73,7 @@ static void HAL_I2CConfig(void) {
     hi2c.Instance             = I2C;
     hi2c.Init.ClockSpeed      = I2C_CLOCKSPEED;
     hi2c.Init.DutyCycle       = I2C_DUTYCYCLE_16_9;
-    hi2c.Init.OwnAddress1     = AW210XX_ADDRESS << 1; // Is this necessary if I'm not a slave?
+    hi2c.Init.OwnAddress1     = 0; 
     hi2c.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c.Init.NoStretchMode   = I2C_NOSTRETCH_DISABLE;
 

@@ -72,3 +72,4 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef *hi2c) {
     __HAL_RCC_I2C_RELEASE_RESET();
 }
 /************************ (C) COPYRIGHT Puya *****END OF FILE******************/
+
