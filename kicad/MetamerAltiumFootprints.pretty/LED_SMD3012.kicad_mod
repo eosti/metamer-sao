@@ -1,0 +1,216 @@
+(footprint "LED_SMD3012"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "781d7224-fbec-4ab6-b1b7-93465e28b576")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "LED_SMD3012"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d3a27500-08ea-42ae-ab99-2ee48bb0ebc5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "32d2d110-0399-43a3-ae97-9b6e904aca38")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31200b9f-9482-4ab2-98df-cd3bbc60da0a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.568005 -0.275197)
+		(end -0.568002 0.232799)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "08ce5023-ab71-4cb3-9159-debcf32a51ff")
+	)
+	(fp_line
+		(start -0.314 -0.021195)
+		(end -0.568008 -0.021199)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fb66dd70-80de-4477-ae71-b5b267db05b0")
+	)
+	(fp_line
+		(start -2.130007 -0.921201)
+		(end -2.130001 0.878796)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "2800927b-b319-4278-9b7f-96e25ff07a73")
+	)
+	(fp_line
+		(start -0.060004 -0.521197)
+		(end -0.06 0.478793)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "55f92321-8905-4ac4-bf52-69c2ffb9622b")
+	)
+	(fp_line
+		(start 0.439993 -0.021204)
+		(end -0.559997 -0.0212)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "504551cd-e13e-4bd2-ba20-d834175e59f0")
+	)
+	(fp_line
+		(start 2.009993 0.878797)
+		(end -2.130001 0.878796)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "b7751406-bb89-4e0b-ba09-c790a58306d2")
+	)
+	(fp_line
+		(start 2.009997 -0.9212)
+		(end -2.130007 -0.921201)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "4f3a513f-ef34-4335-b7f7-b9c808da55ca")
+	)
+	(fp_line
+		(start 2.009997 -0.9212)
+		(end 2.009993 0.878797)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "User.7")
+		(uuid "7021ee3f-4074-4f8f-af5d-1902062753c3")
+	)
+	(fp_line
+		(start -1.350007 0.178798)
+		(end -0.85 0.678802)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "User.11")
+		(uuid "ade3c1f4-5b3a-4151-a29b-53b4dbf75099")
+	)
+	(fp_line
+		(start -1.350005 -0.721205)
+		(end -1.350005 0.678794)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "User.11")
+		(uuid "700873d9-b87f-492f-b8cc-6d2127bfa6c2")
+	)
+	(fp_line
+		(start 1.230001 -0.721208)
+		(end -1.350005 -0.721205)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "User.11")
+		(uuid "d5b1c0d9-a968-4176-8068-c108941ee219")
+	)
+	(fp_line
+		(start 1.230001 -0.721208)
+		(end 1.230001 0.678801)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "User.11")
+		(uuid "f269b43e-2461-46fc-ada7-99cc2ddd8a6e")
+	)
+	(fp_line
+		(start 1.230001 0.678801)
+		(end -1.350005 0.678794)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "User.11")
+		(uuid "ae4bbc46-4d24-417e-a034-ee02d6506504")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "User.8")
+		(uuid "fd0a065a-445a-4289-82e8-d7034be99988")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.06)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0.819994 -0.021207)
+		(size 2 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "65b3fa9b-48e8-4701-9e10-2c8c920f5ab9")
+	)
+	(pad "2" smd roundrect
+		(at -1.330003 -0.021199)
+		(size 1.2 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "87452d4a-f796-48a7-af07-7817ab2ba1b6")
+	)
+	(embedded_fonts no)
+)

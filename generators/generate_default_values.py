@@ -18,6 +18,7 @@ class LED:
     wavelength_dominant: Optional[int] = None
     wavelength_peak: Optional[int] = None
     color_temperature: Optional[int] = None
+    bandwidth: Optional[int] = None
 
 
 def parse_leds(file: Path) -> List[LED]:
@@ -30,6 +31,7 @@ def parse_leds(file: Path) -> List[LED]:
             yaml.Optional("wavelength_dominant"): yaml.Int(),
             yaml.Optional("wavelength_peak"): yaml.Int(),
             yaml.Optional("color_temperature"): yaml.Int(),
+            yaml.Optional("bandwidth"): yaml.Int(),
             "brightness_mcd": yaml.Int(),
             "index": yaml.Int(),
         }
@@ -73,3 +75,22 @@ if __name__ == "__main__":
     outputdec = outputdec[:-2]
     outputdec += " };"
     print(outputdec)
+
+    output_wavelength = []
+    output_bw = []
+    output_bright = []
+    for i in ledlist:
+        if i.bandwidth:
+            if i.wavelength_peak:
+                output_wavelength.append(i.wavelength_peak)
+            else:
+                output_wavelength.append(i.wavelength_dominant)
+
+            output_bw.append(i.bandwidth)
+            output_bright.append(i.brightness_mcd)
+
+
+    print(output_wavelength)
+    print(output_bw)
+    print(output_bright)
+

@@ -1,3 +1,4 @@
+# bandwidth values are a bit messy because most are derived from graph
 global:
   i2c_address: 0x48 # 7-bit
   r_ext: 3650
@@ -8,6 +9,7 @@ leds:
     max_current_ma: 30
     wavelength_dominant: 640
     wavelength_peak: 655
+    bandwidth: 20
     brightness_mcd: 100
     index: 11
   - name: Red
@@ -15,6 +17,7 @@ leds:
     test_current_ma: 20
     max_current_ma: 30
     wavelength_dominant: 620
+    bandwidth: 20
     brightness_mcd: 110
     index: 10
   - name: Orange
@@ -23,6 +26,7 @@ leds:
     max_current_ma: 30
     wavelength_dominant: 605
     wavelength_peak: 611
+    bandwidth: 17
     brightness_mcd: 90
     index: 9
   - name: Yellow
@@ -31,6 +35,7 @@ leds:
     max_current_ma: 25
     wavelength_dominant: 590
     wavelength_peak: 591
+    bandwidth: 15
     brightness_mcd: 100
     index: 8
   - name: Yellow Green
@@ -39,6 +44,7 @@ leds:
     max_current_ma: 25
     wavelength_dominant: 570
     wavelength_peak: 573
+    bandwidth: 15
     brightness_mcd: 30
     index: 7
   - name: Green
@@ -46,6 +52,7 @@ leds:
     test_current_ma: 20
     max_current_ma: 20
     wavelength_dominant: 560
+    bandwidth: 17
     brightness_mcd: 4
     index: 6
   - name: True Green
@@ -54,6 +61,7 @@ leds:
     max_current_ma: 25
     wavelength_dominant: 525
     wavelength_peak: 518
+    bandwidth: 17
     brightness_mcd: 600
     index: 5
   - name: Blue Greener
@@ -61,6 +69,7 @@ leds:
     test_current_ma: 5
     max_current_ma: 20
     wavelength_dominant: 505
+    bandwidth: 12
     brightness_mcd: 120
     index: 4
   - name: Bluer Green
@@ -68,6 +77,7 @@ leds:
     test_current_ma: 5
     max_current_ma: 20
     wavelength_dominant: 496
+    bandwidth: 12
     brightness_mcd: 85
     index: 3
   - name: Blue
@@ -76,6 +86,7 @@ leds:
     max_current_ma: 20
     wavelength_dominant: 470
     wavelength_peak: 470
+    bandwidth: 12
     # altered to fudge the values
     brightness_mcd: 100
     index: 2
@@ -85,6 +96,7 @@ leds:
     max_current_ma: 25
     wavelength_dominant: 465
     wavelength_peak: 465
+    bandwidth: 12
     brightness_mcd: 100
     index: 1
   - name: UV
@@ -93,8 +105,9 @@ leds:
     max_current_ma: 30
     wavelength_dominant: 405
     wavelength_peak: 405
-    # altered to fudge the values
-    brightness_mcd: 200
+    bandwidth: 13
+    # altered to fudge the values (fudge to 200)
+    brightness_mcd: 50
     index: 0
   - name: Daylight White (11000K)
     pn: HL-PSC-2012H233W 9000-16000
