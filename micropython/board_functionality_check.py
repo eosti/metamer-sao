@@ -37,8 +37,28 @@ def openshort_check(leds: AW210xx) -> None:
 
     end_result = True
 
-    if opens not in [3, 16, 17, 18, 19, 20, 21, 22, 23]:
-        print("Unexpected open results!")
+    if 3 not in opens and 4 not in opens:
+        print("Both teals populated, fancy!")
+    elif 3 not in opens or 4 not in opens:
+        print("One teal populated, standard")
+    else:
+        print("Missing both teals!")
+        end_result = False
+
+    for i in opens:
+        if i in [16, 17, 18, 19, 20, 21, 22, 23]:
+            continue
+
+        if i in [3, 4]:
+            # we already dealt with the teals above
+            continue
+
+        elif i == 6:
+            print("Partially assembled board (560nm missing)")
+        elif i == 11:
+            print("Partially assembled board (640nm missing)")
+        else:
+            print("Unexpected open (", i, ")")
         end_result = False
 
     leds.open_short_detect(AW210xxOpenShortDetect.SHORT_ENABLE)
@@ -48,8 +68,11 @@ def openshort_check(leds: AW210xx) -> None:
         print("Unexpect short results!")
         end_result = False
 
+    print()
     if end_result is False:
-        print(":(")
+        print("Failed :(")
+    else:
+        print("Passed :)")
 
 
 def main():

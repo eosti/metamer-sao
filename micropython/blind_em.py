@@ -1,8 +1,9 @@
-# Turns all the LEDs on all the way. Because you can. 
+# Turns all the LEDs on all the way. Because you can.
 
-from machine import I2C, Pin 
+from machine import I2C, Pin
 
 from aw210xx import AW210xx
+
 
 def main():
     i2c = I2C(0, scl=Pin(1), sda=Pin(0), freq=100000)
