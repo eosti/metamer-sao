@@ -1,0 +1,3 @@
+[submodule "micropython/micropython-aw210xx"]
+	path = micropython/micropython-aw210xx
+	url = https://github.com/eosti/micropython-aw210xx
