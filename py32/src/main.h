@@ -14,6 +14,9 @@ extern "C" {
 #define I2C_CLOCKSPEED  100000
 #define AW210XX_ADDRESS 0x30
 
+#define I2C_MUX_PIN GPIO_PIN_5
+#define I2C_MUX_PORT GPIOB
+
 // Exports
 extern I2C_HandleTypeDef hi2c;
 

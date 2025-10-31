@@ -5,7 +5,7 @@
 //        Documentation
 //        PWM for LED?
 
-#define VERSION_NUMBER 0x01
+#define VERSION_NUMBER 0x02
 
 I2C_HandleTypeDef hi2c;
 
@@ -22,6 +22,10 @@ int main(void) {
     HAL_Init();
     HAL_I2CConfig();
     HAL_GpioConfig();
+
+    // Starting config is local I2C
+    HAL_GPIO_WritePin(I2C_MUX_PORT, I2C_MUX_PIN, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(LED_GPIO_PORT, LED_GPIO_PIN, GPIO_PIN_SET);
 
     // GCR = 0x01 (chip enable)
     aw210xx_write(0x00, 0x01);
@@ -45,6 +49,10 @@ int main(void) {
 
     HAL_I2C_DeInit(&hi2c);
 
+    // Once bootstrapped, connect I2C bus to badge
+    HAL_GPIO_WritePin(I2C_MUX_PORT, I2C_MUX_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(LED_GPIO_PORT, LED_GPIO_PIN, GPIO_PIN_RESET);
+
     while (1) {
         // nop
     }
@@ -64,6 +72,13 @@ static void HAL_GpioConfig(void) {
     GPIO_InitStruct.Pull  = GPIO_PULLUP;          /* Enable pull-up */
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH; /* GPIO speed */
     HAL_GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
+    //
+    // PB5 -> I2C mux pin (0 = local I2C, 1 = badge I2C)
+    GPIO_InitStruct.Pin   = I2C_MUX_PIN;
+    GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;  /* Push-pull output */
+    GPIO_InitStruct.Pull  = GPIO_PULLDOWN;        /* Enable pull-down */
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH; /* GPIO speed */
+    HAL_GPIO_Init(I2C_MUX_PORT, &GPIO_InitStruct);
 }
 
 /**
@@ -73,7 +88,7 @@ static void HAL_I2CConfig(void) {
     hi2c.Instance             = I2C;
     hi2c.Init.ClockSpeed      = I2C_CLOCKSPEED;
     hi2c.Init.DutyCycle       = I2C_DUTYCYCLE_16_9;
-    hi2c.Init.OwnAddress1     = 0; 
+    hi2c.Init.OwnAddress1     = 0;
     hi2c.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c.Init.NoStretchMode   = I2C_NOSTRETCH_DISABLE;
 
